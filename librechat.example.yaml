@@ -186,6 +186,60 @@ endpoints:
   #   # (optional) Agent Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
   #   capabilities: ["execute_code", "file_search", "actions", "tools"]
   custom:
+    # Cerebras Example
+    - name: "Cerebras"
+      apiKey: "${CEREBRAS_API_KEY}"
+      baseURL: "https://api.cerebras.ai/v1"
+      models:
+        default: [
+          "llama-4-scout-17b-16e-instruct",
+          "llama3.1-8b",
+          "llama-3.3-70b",
+          "llama-4-maverick-17b-128e",
+          "qwen-3-32b",
+          "qwen-3-235b-a22b"
+        ]
+        fetch: false
+      titleConvo: true
+      titleModel: "llama3.1-8b"
+      summarize: false
+      summaryModel: "llama3.1-8b"
+      forcePrompt: false
+      modelDisplayLabel: "Cerebras"
+      iconURL: "https://www.cerebras.ai/wp-content/uploads/2022/01/cerebras-favicon.png"
+    
+    # Infermatic (TotalGPT) Example
+    - name: "Infermatic"
+      apiKey: "${INFERMATIC_API_KEY}"
+      baseURL: "https://api.totalgpt.ai/v1"
+      models:
+        default: [
+          "TheDrummer-Fallen-Llama-3.3-R1-70B-v1",
+          "Doctor-Shotgun-L3.3-70B-Magnum-v4-SE",
+          "Deepseek-ai-DeepSeek-R1-Distill-Llama-70B",
+          "Sao10K-70B-L3.3-Cirrus-x1",
+          "anthracite-org-magnum-v4-72b-FP8-Dynamic",
+          "Sao10K-72B-Qwen2.5-Kunou-v1-FP8-Dynamic",
+          "Sao10K-L3.3-70B-Euryale-v2.3-FP8-Dynamic",
+          "Sao10K-L3.1-70B-Hanami-x1",
+          "TheDrummer-Anubis-70B-v1-FP8-Dynamic",
+          "L3.1-70B-Euryale-v2.2-FP8-Dynamic",
+          "TheDrummer-UnslopNemo-12B-v4.1",
+          "Qwen2.5-72B-Instruct-Turbo",
+          "nvidia-Llama-3.1-Nemotron-70B-Instruct-HF",
+          "Midnight-Miqu-70B-v1.5",
+          "Mixtral-8x7B-Instruct-v0.1",
+          "TheDrummer-Rocinante-12B-v1.1"
+        ]
+        fetch: true
+      titleConvo: true
+      titleModel: "Sao10K-L3.3-70B-Euryale-v2.3-FP8-Dynamic"
+      summarize: false
+      summaryModel: "Sao10K-L3.3-70B-Euryale-v2.3-FP8-Dynamic"
+      forcePrompt: false
+      modelDisplayLabel: "Infermatic (TotalGPT)"
+      iconURL: "https://infermatic.ai/wp-content/uploads/2023/12/cropped-InfermaticIcon-32x32.png"
+
     # Groq Example
     - name: 'groq'
       apiKey: '${GROQ_API_KEY}'
